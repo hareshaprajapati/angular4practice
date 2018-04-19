@@ -2,7 +2,12 @@
   <div class="row">
     <div class="col-xs-12">
       <h3>  Hi Cool </h3>
+      {{title}}
       <hr>
+      <form (submit)="submitMe(input.value)">
+
+        <input type="text" #input [(ngModel)]="title" name="title">
+      </form>
       <app-servers></app-servers>
     </div>
   </div>
