@@ -1,0 +1,16 @@
+<div
+  class="panel panel-default"
+>
+  <!--*ngFor="let serverElement of serverElements"-->
+
+
+  <!--<div class="panel-heading" #heading>{{ serverElement.name }}</div>-->
+  <div class="panel-heading" #heading>{{ name }}</div>
+  <div class="panel-body">
+    <!--<p #myParagraph>
+                 <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+                 <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+               </p>-->
+    <ng-content></ng-content>
+  </div>
+</div>
