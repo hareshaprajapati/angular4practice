@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  featureClicked = 'recipe';
+
+  onEvent(event: string) {
+    this.featureClicked = event;
+
+  }
 }
