@@ -13,7 +13,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
+
+  hhh = "transparent";
+
+  value = 15;
+
   submitMe(value: string) {
     console.log(value);
+  }
+
+  changeHhh() {
+    if(this.hhh === 'transparent'){
+      this.hhh = 'red';
+    }else{
+      this.hhh = 'transparent';
+    }
+
   }
 }

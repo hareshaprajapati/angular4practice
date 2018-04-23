@@ -1,8 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h3>  Hi Cool </h3>
-      {{title}}
+      <p appBasicHighilghterDirective>  Hi Cool </p>
+      <p [betterHighlighter]="'red'" defaultColor="yellow" >  Hi Cool </p>
+      <button (click)="changeHhh()"> change HHH </button>
+      <div *ngIf="hhh === 'transparent'"> default color is set </div>
+
+      <div *unless="hhh === 'transparent'"> hhh === 'transparent {{hhh}} </div>
+      <div *unless="hhh != 'transparent'"> hhh != 'transparent {{hhh}} </div>
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5"> five</p>
+        <p *ngSwitchCase="10"> ten </p>
+        <p *ngSwitchDefault> default </p>
+      </div>
+      <!--<ng-template [unless]="hhh != 'transparent'"> default color is not set  </ng-template>
+
+      <ng-template [ngIf]="hhh === 'transparent'">
+        default color is set
+      </ng-template>-->
+      <p> {{title}} </p>
       <hr>
       <form (submit)="submitMe(input.value)">
 
