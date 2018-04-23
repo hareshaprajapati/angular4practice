@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import {FormsModule} from "@angular/forms";
-import { BasicHighilghterDirectiveDirective } from './basic-highlighter/basic-highilghter-directive.directive';
-import {BetterHighlighterDirective} from "./better-highlighter/better-highlighter-directive";
-import { UnlessStructuralDirectiveDirective } from './unless-structural-directive.directive';
+import { BasicHighilghterDirectiveDirective } from './directive/basic-highlighter/basic-highilghter-directive.directive';
+import {BetterHighlighterDirective} from "./directive/better-highlighter/better-highlighter-directive";
+import { UnlessStructuralDirectiveDirective } from './directive/unless-structural-directive.directive';
 
 
 @NgModule({
