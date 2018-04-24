@@ -18,7 +18,8 @@
         &lt;!&ndash;src="{{recipe.imagePath}}"&ndash;&gt;
       </span>
     </a>-->
-    <app-recipe-item (recipeClicked)="onRecipeClicked($event)" *ngFor="let recipeItem of recipes" [recipeItem]="recipeItem" ></app-recipe-item>
+    <!--<app-recipe-item (recipeClicked)="onRecipeClicked($event)" *ngFor="let recipeItem of recipes" [recipeItem]="recipeItem" ></app-recipe-item>-->
+    <app-recipe-item *ngFor="let recipeItem of recipes" [recipeItem]="recipeItem" ></app-recipe-item>
   </div>
 </div>
 
