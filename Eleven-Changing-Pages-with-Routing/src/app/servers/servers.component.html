@@ -5,7 +5,7 @@
       <!--[routerLink]="['/servers',5,'edit']"-->
       <a
         [routerLink]="['/servers',server.id]"
-        [queryParams] = "{allowEdit1:'1',allowEdit2:'2'}"
+        [queryParams] = "{allowEdit1: server.id === 3 ? '1' : '0'}"
         fragment="loading"
         class="list-group-item"
         *ngFor="let server of servers">
@@ -14,8 +14,9 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <app-edit-server></app-edit-server>
-    <hr>
+    <router-outlet></router-outlet>
+    <!--<app-edit-server></app-edit-server>
+    <hr>-->
     <!--<app-server></app-server>-->
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {relativeToRootDirs} from "@angular/compiler-cli/src/transformers/util";
+import {AuthService} from "../auth.service";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import {relativeToRootDirs} from "@angular/compiler-cli/src/transformers/util";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router : Router,private route : ActivatedRoute) { }
+  constructor(private router : Router,private route : ActivatedRoute, private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -25,5 +26,12 @@ export class HomeComponent implements OnInit {
 
 
       );
+  }
+
+  login() {
+    this.authService.login();
+  }
+  logout() {
+    this.authService.logout();
   }
 }
