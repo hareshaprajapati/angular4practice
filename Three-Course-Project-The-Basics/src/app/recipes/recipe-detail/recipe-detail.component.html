@@ -1,3 +1,4 @@
+<!--<p *ngIf="!recipeItem"> Please select recipe </p>-->
 <div class="row">
   <div class="col-xs-12">
     <img style="max-height: 300px" [src]="recipeItem.imagePath" alt="" class="img-responsive">
@@ -17,7 +18,9 @@
     </button>
     <ul class="dropdown-menu">
       <li><a style="cursor: pointer" (click)="addIngredients()" > To shopping list</a></li>
-      <li><a style="cursor: pointer"> Edit Recipe</a></li>
+      <!--<li><a style="cursor: pointer" > Edit Recipe</a></li>-->
+      <!--<li><a [routerLink]="['edit']"> Edit Recipe</a></li>-->
+      <li><a [routerLink]="['/recipes',index,'edit']"> Edit Recipe</a></li>
       <li><a style="cursor: pointer"> Delete Recipe</a></li>
     </ul>
   </div>

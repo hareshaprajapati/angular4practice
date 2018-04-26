@@ -11,6 +11,7 @@ export class RecipeItemComponent implements OnInit {
 
 
   @Input() recipeItem : RecipeModel;
+  @Input() recipeItemIndex : number;
 
   // @Output() recipeClicked = new EventEmitter<RecipeModel>();
 

@@ -5,13 +5,25 @@
   </div>
 
   <div class="col-md-7">
-    <app-recipe-detail  *ngIf="recipeSelected; else noRecipeSelected;" [recipeItem]="recipeSelected" >
+    <router-outlet>
+      <!--<ng-template *ngIf="!recipeSelected">
+        Please select recipe;
+      </ng-template>-->
+    </router-outlet>
+    <!--<div *ngIf="recipeSelected; else noRecipeSelected;">
+      <router-outlet></router-outlet>
+    </div>
+
+    <ng-template #noRecipeSelected>
+      Please select recipe;
+    </ng-template>-->
+    <!--<app-recipe-detail  *ngIf="recipeSelected; else noRecipeSelected;" [recipeItem]="recipeSelected" >
     </app-recipe-detail>
 
     <ng-template #noRecipeSelected>
       Please select recipe;
     </ng-template>
-
+-->
     <!--[recipeItem]="recipe"-->
   </div>
 
