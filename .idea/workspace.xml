@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88b72fdf-178e-467c-b2ba-39d6e5c3bcca" name="Default" comment="Finished 09 Using Services  Dependency Injection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.css" afterPath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.css" />
+      <change beforePath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.html" afterPath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.html" />
+      <change beforePath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.spec.ts" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.ts" afterPath="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,13 +30,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="527">
+              <caret line="46" column="9" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="46" selection-end-column="9" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#63#0" expanded="true" />
+                <marker date="1524828692655" expanded="true" signature="647:878" ph="/*...*/" />
+                <marker date="1524828692655" expanded="true" signature="911:971" ph="{...}" />
+                <marker date="1524828692655" expanded="true" signature="931:965" ph="{&quot;username&quot;: &quot;df&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -95,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Three-Course-Project-The-Basics/src/app/recipes/recipes.component.ts" />
         <option value="$PROJECT_DIR$/Three-Course-Project-The-Basics/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" />
         <option value="$PROJECT_DIR$/Three-Course-Project-The-Basics/src/app/shopping-list/shopping-list.component.html" />
         <option value="$PROJECT_DIR$/Three-Course-Project-The-Basics/src/app/recipes/recipe.model.ts" />
@@ -144,8 +159,9 @@
         <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/.angular-cli.json" />
         <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/package.json" />
         <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.html" />
       </list>
     </option>
   </component>
@@ -196,6 +212,24 @@
             <path>
               <item name="angularpractice_udemi" type="b2602c69:ProjectViewProjectNode" />
               <item name="angularpractice_udemi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angularpractice_udemi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angularpractice_udemi" type="462c0819:PsiDirectoryNode" />
+              <item name="Fifteen-Handling-Forms-in-Angular-Apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angularpractice_udemi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angularpractice_udemi" type="462c0819:PsiDirectoryNode" />
+              <item name="Fifteen-Handling-Forms-in-Angular-Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angularpractice_udemi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angularpractice_udemi" type="462c0819:PsiDirectoryNode" />
+              <item name="Fifteen-Handling-Forms-in-Angular-Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -348,7 +382,7 @@
       <workItem from="1524630663424" duration="19124000" />
       <workItem from="1524716528673" duration="8617000" />
       <workItem from="1524736346563" duration="4247000" />
-      <workItem from="1524802182464" duration="9831000" />
+      <workItem from="1524802182464" duration="18030000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1523612900135</created>
@@ -487,7 +521,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160387000" />
+    <option name="totallyTimeSpent" value="168586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="34" width="1303" height="780" extended-state="6" />
@@ -506,7 +540,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3243028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14581673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36245954" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -620,13 +654,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Eleven-Changing-Pages-with-Routing/node_modules/@angular/router/src/interfaces.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="227" column="17" lean-forward="false" selection-start-line="227" selection-start-column="17" selection-end-line="227" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eleven-Changing-Pages-with-Routing/src/app/can-deactivate-auth-guard.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -974,13 +1001,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="527">
+          <caret line="46" column="9" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="46" selection-end-column="9" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#63#0" expanded="true" />
+            <marker date="1524828692655" expanded="true" signature="647:878" ph="/*...*/" />
+            <marker date="1524828692655" expanded="true" signature="911:971" ph="{...}" />
+            <marker date="1524828692655" expanded="true" signature="931:965" ph="{&quot;username&quot;: &quot;df&quot;...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fifteen-Handling-Forms-in-Angular-Apps/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
