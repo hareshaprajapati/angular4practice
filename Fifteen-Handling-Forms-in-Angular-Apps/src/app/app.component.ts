@@ -8,7 +8,7 @@ import {NgForm} from "@angular/forms";
 })
 export class AppComponent {
   suggestUserName() {
-    const suggestedName = 'Super user';
+    const suggestedName = 'Super asdf user';
   }
 
   onSubmit(form : NgForm){
