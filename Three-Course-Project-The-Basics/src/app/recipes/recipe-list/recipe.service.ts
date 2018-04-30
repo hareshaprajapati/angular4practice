@@ -1,6 +1,7 @@
 import {RecipeModel} from "../recipe.model";
 import {EventEmitter} from "@angular/core";
 import {Ingredient} from "../../shared/ingredient";
+import {Subject} from "rxjs/Subject";
 
 export class RecipeService{
 
@@ -28,6 +29,8 @@ export class RecipeService{
         new Ingredient("sssssssss",2)])
   ];
 
+  recipeUpdatedSubject = new Subject<any>();
+
   getRecipe(){
     return this.recipes.slice();
   }
@@ -36,4 +39,17 @@ export class RecipeService{
     return this.recipes[index];
   }
 
+  addRecipe(recipeModel: RecipeModel) {
+    this.recipes.push(recipeModel);
+    this.recipeUpdatedSubject.next();
+  }
+
+  updateRecipe(id: number, recipeModel: RecipeModel) {
+    this.recipes[id] = recipeModel;
+    this.recipeUpdatedSubject.next();
+  }
+  deleteRecipe(index : number){
+    this.recipes.splice(index,1);
+    this.recipeUpdatedSubject.next();
+}
 }

@@ -1,14 +1,15 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {RecipeModel} from "../recipe.model";
 import {RecipeService} from "./recipe.service";
 import {ActivatedRoute, Route, Router, Routes} from "@angular/router";
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent implements OnInit , OnDestroy{
 
   /*recipes: RecipeModel[] = [
     {
@@ -22,12 +23,19 @@ export class RecipeListComponent implements OnInit {
 
   recipes: RecipeModel[];
 
+  recipeUpdatedSubjectSubscription : Subscription;
+
   // @Output() recipeItemEventEmitter = new EventEmitter<RecipeModel>();
 
   constructor(private recipeService : RecipeService,
               private activatedRoute : ActivatedRoute, private route : Router) { }
 
   ngOnInit() {
+  this.recipeUpdatedSubjectSubscription =   this.recipeService.recipeUpdatedSubject.subscribe(
+      () => {
+        this.recipes = this.recipeService.getRecipe();
+      }
+    );
     this.recipes = this.recipeService.getRecipe();
   }
 
@@ -37,5 +45,9 @@ export class RecipeListComponent implements OnInit {
   }*/
   openNewRecipe() {
     this.route.navigate(['new'] , { relativeTo: this.activatedRoute });
+  }
+
+  ngOnDestroy(): void {
+    this.recipeUpdatedSubjectSubscription.unsubscribe();
   }
 }
