@@ -12,11 +12,21 @@ export class ShoppingListService{
   // ingredientAddedEventEmitter = new EventEmitter();
   // ingredientAddedEventEmitter = new EventEmitter<Ingredient[]>();
   ingredientAddedSubject = new Subject<Ingredient[]>();
+  currentlySelectedIndexSubject = new Subject<number>()
 
 
   getIngredients(){
     return this.ingredients.slice();
   }
+  getIngredient(index : number){
+    return this.ingredients[index];
+  }
+
+  updateIngredient(index: number, item : Ingredient){
+    this.ingredients[index] = item;
+    this.ingredientAddedSubject.next(this.ingredients.slice());
+  }
+
   pushIngredientInList(event: Ingredient) {
     this.ingredients.push(event);
     // this.ingredientAddedEventEmitter.emit();
@@ -29,5 +39,8 @@ export class ShoppingListService{
     this.ingredientAddedSubject.next(this.ingredients.slice());
   }
 
-
+  removeIngredient(currentlySelectedIndex: number) {
+    this.ingredients.splice(currentlySelectedIndex,1);
+    this.ingredientAddedSubject.next(this.ingredients.slice());
+  }
 }

@@ -1,7 +1,8 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Ingredient} from "../shared/ingredient";
 import {ShoppingListService} from "./shopping-list.service";
 import {Subscription} from "rxjs/Subscription";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-shopping-list',
@@ -19,6 +20,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ingredients :Ingredient[];
 
   ingredientAddedSubjectSubscription : Subscription;
+
+  @ViewChild('shoppingListForm') shoppingListForm : NgForm;
 
 
   constructor(private slistService : ShoppingListService) { }
@@ -48,4 +51,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     // this.ingredients.push(event);
     this.slistService.pushIngredientInList(event);
   }*/
+  populateInEditControlForm(index : number) {
+    this.slistService.currentlySelectedIndexSubject.next(index);
+  }
 }
