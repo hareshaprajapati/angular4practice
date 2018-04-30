@@ -8,21 +8,21 @@ import {NgForm} from "@angular/forms";
 })
 export class AppComponent {
 
-  @ViewChild('form') form: NgForm;
+  @ViewChild('myForm') form: NgForm;
   defaultQuestion = "pet";
   answer: string;
 
   genders = ['male', 'female'];
   defaultGender = 'male';
 
-  user: {
-    'gender': string,
-    'questionAnswer': string,
-    'secret': string,
-    'userData': {
-      'email': string,
-      'username': string
-    }
+  user =  {
+    'gender': '',
+    'questionAnswer': '',
+    'secret': '',
+    // 'userData': {
+      'email': '',
+      'username': ''
+    // }
   }
 
   formSubmmited = false;
@@ -49,8 +49,10 @@ export class AppComponent {
   }
 
   onSubmit() {
-    this.user.userData.username = this.form.value.gender;
-    this.user.userData.email= this.form.value.email;
+    // this.user.userData.username = this.form.value.gender;
+    // this.user.userData.email= this.form.value.email;
+    this.user.username = this.form.value.userData.username;
+    this.user.email= this.form.value.userData.email;
     this.user.secret = this.form.value.secret;
     this.user.gender = this.form.value.gender;
     this.user.questionAnswer = this.form.value.questionAnswer;
