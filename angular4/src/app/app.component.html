@@ -14,10 +14,10 @@
         <p *ngSwitchDefault> default </p>
       </div>
       <!--<ng-template [unless]="hhh != 'transparent'"> default color is not set  </ng-template>
-
+-->
       <ng-template [ngIf]="hhh === 'transparent'">
         default color is set
-      </ng-template>-->
+      </ng-template>
       <p> {{title}} </p>
       <hr>
       <form (submit)="submitMe(input.value)">

@@ -4,6 +4,7 @@ import {Response} from "@angular/http";
 import {RecipeHttpService} from "../shared/recipe-http.service";
 import {RecipeModel} from "../recipes/recipe.model";
 import {RecipeService} from "../recipes/recipe-list/recipe.service";
+import {AuthService} from "../auth/auth-service";
 
 @Component({
     selector: 'header-component',
@@ -23,7 +24,7 @@ export class HeaderComponent {
 
   }
 
-  constructor(private recipeHttpService: RecipeHttpService, private recipeService : RecipeService){}
+  constructor(private recipeHttpService: RecipeHttpService, private recipeService : RecipeService, private authService : AuthService){}
 
   saveData() {
     this.recipeHttpService.saveRecipe().subscribe(
@@ -39,5 +40,8 @@ export class HeaderComponent {
           this.recipeService.updateAll(data);
       }
     );
+  }
+  logout(){
+    this.authService.logout();
   }
 }
