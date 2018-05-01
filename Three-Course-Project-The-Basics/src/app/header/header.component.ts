@@ -1,4 +1,9 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {ShoppingListService} from "../shopping-list/shopping-list.service";
+import {Response} from "@angular/http";
+import {RecipeHttpService} from "../shared/recipe-http.service";
+import {RecipeModel} from "../recipes/recipe.model";
+import {RecipeService} from "../recipes/recipe-list/recipe.service";
 
 @Component({
     selector: 'header-component',
@@ -16,5 +21,23 @@ export class HeaderComponent {
 
   openMe() {
 
+  }
+
+  constructor(private recipeHttpService: RecipeHttpService, private recipeService : RecipeService){}
+
+  saveData() {
+    this.recipeHttpService.saveRecipe().subscribe(
+      ( value : Response ) => { console.log(value); },
+      (error2 : Response) => { console.log(error2); }
+    );
+  }
+
+  fetchData() {
+    this.recipeHttpService.getRecipe().subscribe(
+      (data : RecipeModel[]) => {
+        console.log(data);
+          this.recipeService.updateAll(data);
+      }
+    );
   }
 }

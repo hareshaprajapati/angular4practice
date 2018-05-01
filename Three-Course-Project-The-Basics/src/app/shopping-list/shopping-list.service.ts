@@ -1,7 +1,11 @@
 import {Ingredient} from "../shared/ingredient";
-import {EventEmitter} from "@angular/core";
+import {EventEmitter, Injectable} from "@angular/core";
 import {Subject} from "rxjs/Subject";
+import {Http} from "@angular/http";
 
+import 'rxjs/Rx';
+
+@Injectable()
 export class ShoppingListService{
 
   private ingredients :Ingredient[] = [

@@ -35,6 +35,11 @@ export class RecipeService{
     return this.recipes.slice();
   }
 
+  updateAll(recipeModel : RecipeModel[]){
+    this.recipes = recipeModel;
+    this.recipeUpdatedSubject.next();
+  }
+
   getRecipeById(index: number){
     return this.recipes[index];
   }

@@ -32,8 +32,7 @@ export class EditRecipeComponent implements OnInit {
   }
 
   cancelMe() {
-    this.editForm.reset();
-    this.router.navigate(['..'], {relativeTo: this.activatedRoute});
+    this.router.navigate(['../'], {relativeTo: this.activatedRoute});
   }
 
   onsubmit() {
