@@ -16,7 +16,7 @@ export class AppComponent {
 
   hhh = "transparent";
 
-  value = 15;
+  value = 5;
 
   submitMe(value: string) {
     console.log(value);

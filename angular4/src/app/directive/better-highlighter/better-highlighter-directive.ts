@@ -12,7 +12,7 @@ export class BetterHighlighterDirective implements OnInit{
 
   @Input('betterHighlighter') highlightColor : string = 'red';
 
-  @HostBinding('style.backgroundColor') bgColor: string = this.defaultColor;
+  @HostBinding('style.backgroundColor') bgColorHostBinding: string = this.defaultColor;
 
 
   constructor(private eleRef : ElementRef, private render: Renderer2) {
@@ -20,16 +20,16 @@ export class BetterHighlighterDirective implements OnInit{
 
   ngOnInit(): void {
     // this.render.setStyle(this.eleRef.nativeElement,'background-color','red');
-    this.bgColor = this.defaultColor;
+    this.bgColorHostBinding = this.defaultColor;
   }
 
   @HostListener('mouseenter') mouseEnter(eventData : Event){
     // this.render.setStyle(this.eleRef.nativeElement,'background-color','red');
-    this.bgColor = this.highlightColor
+    this.bgColorHostBinding = this.highlightColor
   }
   @HostListener('mouseleave') mouseLeave(eventData : Event){
     // this.render.setStyle(this.eleRef.nativeElement,'background-color','transparent');
-    this.bgColor = this.defaultColor;
+    this.bgColorHostBinding = this.defaultColor;
   }
 
 }
