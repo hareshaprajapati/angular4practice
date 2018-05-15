@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <p appBasicHighilghterDirective>  Hi Cool </p>
-      <p [betterHighlighter]="'red'" defaultColor="yellow" >  Hi Cool </p>
-      <button (click)="changeHhh()"> change HHH </button>
-      <div *ngIf="hhh === 'transparent'"> default color is set </div>
+      <p appBasicHighilghterDirective> Hi Cool </p>
+      <p [betterHighlighter]="'red'" defaultColor="yellow"> Hi Cool </p>
+      <button (click)="changeHhh()"> change HHH</button>
+      <p> HHH value is {{hhh}}</p>
+      <div *ngIf="hhh === 'transparent'"> default color is set</div>
 
-      <div *unless="hhh === 'transparent'"> hhh === 'transparent {{hhh}} </div>
-      <div *unless="hhh != 'transparent'"> hhh != 'transparent {{hhh}} </div>
+      <div *unless="hhh === 'transparent'"> hhh === 'transparent {{hhh}}</div>
+      <div *unless="hhh != 'transparent'"> hhh != 'transparent {{hhh}}</div>
       <div [ngSwitch]="value">
         <p *ngSwitchCase="5"> five</p>
         <p *ngSwitchCase="10"> ten </p>
@@ -18,6 +19,11 @@
       <ng-template [ngIf]="hhh === 'transparent'">
         default color is set
       </ng-template>
+
+      <div *ngIf="hhh === 'transparent'; else test">
+        default color is set
+      </div>
+      <ng-template #test> this is test of else condition</ng-template>
       <p> {{title}} </p>
       <hr>
       <form (submit)="submitMe(input.value)">

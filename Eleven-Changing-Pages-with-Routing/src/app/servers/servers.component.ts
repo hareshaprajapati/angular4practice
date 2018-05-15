@@ -18,7 +18,7 @@ export class ServersComponent implements OnInit {
   }
 
   loadServers() {
-    this.router.navigate(['servers'],{relativeTo : this.route});
+    this.router.navigate(['/servers'],{relativeTo : this.route});
   }
 
 }

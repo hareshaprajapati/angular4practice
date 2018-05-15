@@ -17,6 +17,8 @@ export class ServerComponent implements OnInit {
     this.ar.data.subscribe(
       (value:Data) => {
         this.server = value['serverData'];
+        console.log("this.server ");
+        console.log( this.server);
       }
     );
     // this.server = this.serversService.getServer(1);
