@@ -1,0 +1,185 @@
+<form class="example-form">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+  <table mat-table matSort [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+  <ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="name" name="name" placeholder="What's your name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="animal">
+      You chose: <i>{{animal}}</i>
+    </li>
+  </ol>
+
+  <button mat-button>Rectangular   </button>
+  <br><br>
+  <button mat-raised-button>Rectangular   w/ elevation</button>
+  <br><br>
+  <button mat-flat-button	>Rectangular   w/ no elevation</button>
+  <br><br>
+  <button mat-stroked-button>Rectangular outlined button w/ no elevation</button>
+  <br><br>
+  <button mat-icon-button>Circular button with a transparent background, meant to contain an icon</button>
+  <br><br>
+  <button mat-fab >Circular button w/ elevation, defaults to theme's accent color</button>
+  <br><br>
+  <button mat-mini-fab>Same as mat-fab but smaller</button>
+
+  <mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine> message.from</h3>
+      <p matLine>
+        <span> message.subject</span>
+        <span class="demo-2"> -- message.content</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-card>Simple card
+    <mat-card-header>
+      <mat-card-title>	A title within the header </mat-card-title>
+        <mat-card-subtitle> sub title </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-title>	Card title </mat-card-title>
+    <mat-card-subtitle>	Card subtitle </mat-card-subtitle>
+    <mat-card-content>	Primary card content. Intended for blocks of text </mat-card-content>
+    <!--<img mat-card-image>	Card image. Stretches the image to the container width </mat-card>-->
+  <mat-card-actions>	Container for buttons at the bottom of the card </mat-card-actions>
+  <mat-card-footer> footer </mat-card-footer>
+
+  </mat-card>
+
+    <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+      <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+      <mat-sidenav-content>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+
+    <mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop.value">
+      <mat-drawer #drawer [mode]="mode.value">I'm a drawer</mat-drawer>
+      <mat-drawer-content>
+        <mat-form-field>
+          <mat-label>Sidenav mode</mat-label>
+          <mat-select #mode value="side">
+            <mat-option value="side">Side</mat-option>
+            <mat-option value="over">Over</mat-option>
+            <mat-option value="push">Push</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Has backdrop</mat-label>
+          <mat-select #hasBackdrop>
+            <mat-option>Unset</mat-option>
+            <mat-option [value]="true">True</mat-option>
+            <mat-option [value]="false">False</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+      </mat-drawer-content>
+    </mat-drawer-container>
+
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="pick any" aria-label="Number" matInput [formControl]="myControl"
+           [matAutocomplete]="auto">
+
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-chip-list #chipList>
+      <mat-chip>One fish</mat-chip>
+      <mat-chip>Two fish</mat-chip>
+      <mat-chip color="primary" selected>Primary fish</mat-chip>
+      <mat-chip color="accent" selected>Accent fish</mat-chip>
+    </mat-chip-list>
+
+    <input placeholder="New fruit..."
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)">
+  </mat-form-field>
+  <div>
+    <mat-checkbox [formControl]="myCheckBox">Check me!</mat-checkbox>
+  </div>
+
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option.address }}
+    </mat-option>
+  </mat-autocomplete>
+
+   <div class="custom-wrapper-example" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+     <input
+       matInput
+       [formControl]="myControl"
+       [matAutocomplete]="auto"
+       [matAutocompleteConnectedTo]="origin">
+   </div>
+   <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+
+     <mat-option *ngFor="let option of options" [value]="option">{{option.address}}</mat-option>
+   </mat-autocomplete>
+
+  <p>
+  <form [formGroup]="stateForm">
+    <mat-form-field>
+      <input type="text" matInput placeholder="States Group" formControlName="stateGroup" required
+             [matAutocomplete]="autoGroup">
+      <mat-autocomplete #autoGroup="matAutocomplete">
+        <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+          <mat-option *ngFor="let name of group.names" [value]="name">
+            {{name}}
+          </mat-option>
+        </mat-optgroup>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</form>

@@ -1,0 +1,38 @@
+<h1 class="mat-dialog-title" mat-dialog-title="" id="mat-dialog-title-12">Hi {{ data.name }}</h1>
+
+<div class="mat-dialog-content" mat-dialog-content="">
+  <p>What's your favorite animal?</p>
+  <mat-form-field
+    class="mat-form-field ng-tns-c21-325 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched">
+    <div class="mat-form-field-wrapper">
+      <div class="mat-form-field-flex"><!----><!---->
+        <div class="mat-form-field-infix">
+          <input
+            class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-valid ng-dirty ng-touched"
+            matInput [formControl]="animalNameFormControl" id="mat-input-59" aria-invalid="false" aria-required="false"><span
+          class="mat-form-field-label-wrapper"><!----></span></div><!----></div><!---->
+      <!--<div class="mat-form-field-underline ng-tns-c21-325 ng-star-inserted" style=""><span
+        class="mat-form-field-ripple"></span></div>-->
+      <!--<div class="mat-form-field-subscript-wrapper">&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;
+        <div
+          class="mat-form-field-hint-wrapper ng-tns-c21-325 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
+          style="opacity: 1; transform: translateY(0%);">&lt;!&ndash;&ndash;&gt;
+          <div class="mat-form-field-hint-spacer"></div>
+        </div>
+      </div>-->
+    </div>
+  </mat-form-field>
+</div>
+
+
+<div class="mat-dialog-actions" mat-dialog-actions="">
+  <button mat-button=""  mat-dialog-close  class="mat-button"><span class="mat-button-wrapper">No Thanks</span>
+    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+    <div class="mat-button-focus-overlay"></div>
+  </button>
+  <button cdkfocusinitial="" (click)="OnOkClick()" mat-button="" type="button" [mat-dialog-close]="false"  class="mat-button" aria-label="Close dialog"><span
+    class="mat-button-wrapper">Ok</span>
+    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+    <div class="mat-button-focus-overlay"></div>
+  </button>
+</div>
